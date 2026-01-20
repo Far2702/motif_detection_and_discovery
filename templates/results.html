@@ -1,0 +1,32 @@
+<h2>Significant Candidate CRP (cAMP Receptor Protein) Binding Sequences (22-mers)</h2>
+
+<p><b>Significance Level (α):</b> {{ alpha }}</p>
+{% if significant_sites %}
+  <ul>
+    {% for motif in significant_sites %}
+      <li><b>{{ loop.index }}.</b> {{ motif }}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No significant motifs found.</p>
+{% endif %}
+
+<hr>
+
+<div class="plot-box">
+  <h2>Sequence Logo for PPM </h2>
+  <img src="{{ url_for('static', filename='sequence_logo.png') }}">
+</div>
+
+<div class="plot-box">
+  <h2>Empirical Distribution of Log-Likelihood Ratio</h2>
+  <img src="{{ url_for('static', filename='empirical_dist.png') }}">
+</div>
+
+<hr>
+
+<a href="/">Scan another sequence</a>
+
+<br>
+<br>
+<br>

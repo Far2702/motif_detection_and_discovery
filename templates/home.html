@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Motif Scanner</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            width: 600px;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 15px;
+            display: block;
+        }
+
+        textarea, input {
+            width: 100%;
+            margin-top: 8px;
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            font-size: 16px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .note {
+            font-size: 13px;
+            color: #666;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>DNA Motif Scanner</h1>
+    <p>Scan DNA sequences for statistically significant motifs</p>
+
+    <form method="POST" action="/result">
+        <label for="sequence">DNA Sequence</label>
+        <textarea
+            id="sequence"
+            name="sequence"
+            rows="5"
+            placeholder="Example: ATGCGTACGTAGCTAG..."
+            required></textarea>
+
+        <label for="alpha">Significance Level (α)</label>
+        <input
+            type="number"
+            name="alpha"
+            id="alpha"
+            step="0.001"
+            min="0.001"
+            max="0.1"
+            value="0.05"
+            required>
+
+        <button type="submit">Scan Motifs</button>
+    </form>
+
+    <div class="note">
+        <b>Note:</b> α defines the probability threshold for motif significance.
+    </div>
+</div>
+</body>
+</html>
