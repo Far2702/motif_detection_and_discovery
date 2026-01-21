@@ -41,6 +41,8 @@ Using this dataset:
 
 - Convert PFM → PPM → PWM using estimated background nucleotide frequencies
 
+- **Apply pseudocounts to nucleotide counts** to prevent zero probabilities, which would otherwise cause the log-likelihood ratio to diverge or become undefine
+
 ### Motif Scanning
 
 - Apply sliding-window scanning across query DNA sequences
