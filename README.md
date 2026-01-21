@@ -89,6 +89,13 @@ Since the analytical distribution of the LLR random variable is unknown, statist
 
 - Aggregate these scores to obtain the empirical null distribution
 
+
+<p align="center">
+  <img src="images/distribution.png" width="450">
+  <br>
+  <small><b>Figure 1.</b> Empirical Distribution.</small>
+</p>
+
 This approach avoids parametric assumptions and allows direct estimation of significance thresholds.
 
 ### Decision Rule
@@ -101,6 +108,28 @@ This approach avoids parametric assumptions and allows direct estimation of sign
 
 **Conservative α values are used due to correlated hypothesis tests induced by overlapping sliding windows.**
 
+
+## Visualization and Interpretation
+
+- **Sequence logos** derived from PPMs are used to visualize nucleotide conservation and degeneracy across motif positions
+
+
+<p align="center">
+  <img src="images/sequence_logo.png" width="450">
+  <br>
+  <small><b>Figure 2.</b> Sequence logo derived from the PPM showing positional nucleotide conservation.</small>
+</p>
+
+
+- **Interactive Plotly** visualizations are used to display empirical LLR distributions and significance thresholds, enabling intuitive interpretation of motif significance
+
+<p align="center">
+  <img src="images/interactive_plot.png" width="450">
+  <br>
+  <small><b>Figure 3.</b> Interactive Plot Image for PPM (Made using Plotly).</small>
+</p>
+
+
 ## Planned Extensions
 
 - Expectation–Maximization (EM)–based motif discovery from unlabeled sequences
@@ -110,13 +139,6 @@ This approach avoids parametric assumptions and allows direct estimation of sign
 - Support for variable-length motifs
 
 - Improved background models using Markov nucleotide dependencies
-
-
-## Visualization and Interpretation
-
-- **Sequence logos** derived from PPMs are used to visualize nucleotide conservation and degeneracy across motif positions
-
-- **Interactive Plotly** visualizations are used to display empirical LLR distributions and significance thresholds, enabling intuitive interpretation of motif significance
 
 ## Technologies Used
 
